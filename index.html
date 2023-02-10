@@ -96,7 +96,15 @@
 <body>
 
   <h1>Mobile Ads</h1>
+  
+<amp-sticky-ad layout="nodisplay">
+  <amp-ad width="300" height="250"
+      type="adsense"
+      data-ad-client="ca-pub-8588820008944775">
+  </amp-ad>
+  </amp-sticky-ad>
 
+      <div class="viewport-100"></div>
       <!--
         `amp-fx-flying-carpet` elements must be positioned after the first viewport so make sure to place enough content before the element to cover the targeted viewport sizes. The box that follows is to ensure that the `amp-fx-flying-carpet` is placed after the first viewport.
         <div class="viewport-100"></div>
@@ -115,9 +123,17 @@
       <div class="viewport-100"></div>
 
       
+     <!--
+        <div class="viewport-100"></div>
+        ## Flying carpet for images
+        `amp-fx-flying-carpet` can be also used to display images.
+      -->
+ 
 
-    <div class="viewport-100"></div>
-
+ <amp-fx-flying-carpet height="300px">
+        <amp-img src="https://preview.amp.dev/static/samples//img/landscape_lake_1280x857.jpg" width="1280" height="853" alt="an image">
+        </amp-img>
+  </amp-fx-flying-carpet>
    <amp-user-notification
       layout=nodisplay
       id="amp-user-notification">
@@ -136,17 +152,7 @@
   </div>
 
   <h2>Sponsors</h2>
-   <!--
-        <div class="viewport-100"></div>
-        ## Flying carpet for images
-        `amp-fx-flying-carpet` can be also used to display images.
-      -->
- 
-
- <amp-fx-flying-carpet height="300px">
-        <amp-img src="https://preview.amp.dev/static/samples//img/landscape_lake_1280x857.jpg" width="1280" height="853" alt="an image">
-        </amp-img>
-  </amp-fx-flying-carpet>
+   
   <amp-ad width=300 height=250
       type="adsense"
       data-ad-client="ca-pub-2005682797531342"
@@ -156,12 +162,6 @@
     <div fallback></div>
   </amp-ad>
 
-  <amp-sticky-ad layout="nodisplay">
-  <amp-ad width="300" height="250"
-      type="adsense"
-      data-ad-client="ca-pub-8588820008944775">
-  </amp-ad>
-  </amp-sticky-ad>
-
+  
 </body>
 </html>
