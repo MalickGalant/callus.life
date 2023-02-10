@@ -1,189 +1,79 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Responsive Ad</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="HandheldFriendly" content="True" />
-        <style type="text/css">
-        
-            /* Temp, needed for local testing only */
-            .gs-container {
-                max-width: 1300px;
-                margin: 0 auto;
-            } 
-            
-            .adTest-adBWrapper .container__body {
-                height: 250px;
-                position: relative;
-            }
-        
-            /* These are over-riding site styles USE WITH CAUTION */
-            .top-banner-ad-container--desktop,
-            .top-banner-ad-container--desktop .ad-slot--top-banner-ad {
-                display: block !important;
-                max-width: none !important;
-            }
+<!--
+    ## Introduction
 
-            .top-banner-ad-container--desktop .ad-slot--top-banner-ad {
-                width: 100% !important;
-                padding: 0 !important;
-                margin-left: 0 !important;
-            }
-
-            /* End of nasty hacks */
-        
-            .adTest-adWrapper {
-                height: 250px;
-                box-sizing: border-box;
-                background-repeat: no-repeat;
-                background-position: top left;
-                position: relative;
-            }
-
-            @media (max-width : 319px) {
-                .adTest-adWrapper {
-                    background-image: url(images/300x250.jpg);
-                }
-            }
- 
-            @media (min-width : 320px) {
-                .adTest-adBWrapper {
-                    background: url(images/bgTexture.png),  url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iIzRjNGM0YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-                    background: url(images/bgTexture.png), -moz-linear-gradient(left,  rgba(38,38,38,1) 1%, rgba(0,0,0,0) 100%);
-                    background: url(images/bgTexture.png), -webkit-gradient(linear, left top, right top, color-stop(1%,rgba(38,38,38,1)), color-stop(100%,rgba(0,0,0,0)));
-                    background: url(images/bgTexture.png), -webkit-linear-gradient(left,  rgba(38,38,38,1) 1%,rgba(0,0,0,0) 100%);
-                    background: url(images/bgTexture.png), -o-linear-gradient(left,  rgba(38,38,38,1) 1%,rgba(0,0,0,0) 100%);
-                    background: url(images/bgTexture.png), -ms-linear-gradient(left,  rgba(38,38,38,1) 1%,rgba(0,0,0,0) 100%);
-                    background: url(images/bgTexture.png), linear-gradient(to right,  rgba(38,38,38,1) 1%,rgba(0,0,0,0) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#00000000',GradientType=1 );
-                }
-                .adTest-adWrapper {
-                    background-position: -56px 0;
-                }
-                .adTest-subject {
-                    position: absolute;
-                    width: 33%;
-                    height: 200px;
-                    background: url(images/chanelBottleSmall.png) no-repeat top center;
-                    background-size: contain;
-                    right: 0;
-                    top: 25px;
-                }
-                .adTest-cta {
-                    position: absolute;
-                    width: 300px;
-                    height: 40px;
-                    left: 10px;
-                    bottom: 11px;
-                }
-                .adTest-cta:before {
-                    content: " ";
-                    background: url(images/wearToBed.png) no-repeat;
-                    display: block;
-                    width: 300px;
-                    height: 40px;
-                }
-            }
-            
-            @media (min-width : 320px) and (max-width : 739px) {
-                .adTest-adWrapper {
-                    background-image: url(images/mMedium.png);
-                }    
-            }
-            
-            @media (min-width : 740px) {
-                .adTest-adWrapper {
-                    background-image: url(images/mWide.png);
-                    background-position: -240px 0;
-                }
-                .adTest-subject {
-                    top: 15px;
-                    width: 300px;
-                    height: 220px;
-                }
-                .adTest-cta {
-                    left: auto;
-                    right: 220px;
-                    width: 44%;
-                }
-                .adTest-cta:after {
-                    content: " ";
-                    background: url(images/justAFewDrops.png) no-repeat;
-                    display: block;
-                    width: 184px;
-                    height: 150px;
-                    right: -10px;
-                    top: -130px;
-                    position: absolute;
-                }
-                .ad-slot--top-banner-ad .ad-slot__label {
-                    width: auto;
-                    max-width: 740px;
-                    margin: 0 auto;
-                }
-            }  
-            @media (min-width : 1140px) {
-                .adTest-adWrapper {
-                    margin-left: 0;
-                    background-position: 20% 0;
-                }
-                .adTest-subject {
-                    width: 300px;
-                    height: 240px;
-                    left: auto;
-                    top: 5px;
-                }
-                .adTest-cta {
-                    left: 2%;
-                    right: auto;
-                    bottom: 20px;
-                    width: 75%;
-                }
-                .adTest-cta:after {
-                    right: -40px;
-                }
-                .top-banner-ad-container--facia-layout .adTest-cta:after {
-                    right: -10px;                
-                }
-                .ad-slot--top-banner-ad .ad-slot__label {
-                    max-width: 1140px;
-                }
-            }
-            @media (min-width : 1300px) {
-                .adTest-cta {
-                    width: 80%;
-                }
-                adTest-cta:after {
-                    right: -20px;
-                }
-                .top-banner-ad-container--facia-layout .adTest-cta:after {
-                    right: 60px;
-                }
-                .ad-slot--top-banner-ad .ad-slot__label {
-                    max-width: 1300px;
-                }
-            }              
+    [`amp-fx-flying-carpet`](/content/amp-dev/documentation/components/reference/amp-fx-flying-carpet-v0.1.md) displays its children inside a container of fixed height. As the user scrolls the page, the flying carpet reveals more of it contents, sliding across its children as if peering through a window in the page.
+  --><!-- -->
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+<meta charset="utf-8">
+      <title>amp-fx-flying-carpet</title>
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <!-- ## Setup -->
+      <!-- Import the `amp-fx-flying-carpet` component in the header. -->
+      <script async custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script>
+      <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+      <meta name="viewport" content="width=device-width">
+      <link rel="canonical" href="https://amp.dev/documentation/examples/components/amp-fx-flying-carpet/index.html">
+      <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+    :root {
+      --color-secondary: #00DCC0;
+    }
+    .amp-flying-carpet-text-border {
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+    .viewport-100 {
+      height: 100vh;
+      background-color: var(--color-secondary);
+    }
         </style>
     </head>
     <body>
-        <div class="adTest-adBWrapper">
-            <a href="%%CLICK_URL_UNESC%%htp://www.theguardian.com">
-                <div class="gs-container">
-                    <div class="adTest-adWrapper">
-                        <div class="facia-container--layout-front">
-                            <div class="facia-container__inner">
-                                <div class="container__body">
-                                    <div class="adTest-cta"></div>
-                                    <div class="adTest-subject"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </body>
-</html>
+    <body>
+        
+      
+      <div class="viewport-100"></div>
+      <!--
+        `amp-fx-flying-carpet` elements must be positioned after the first viewport so make sure to place enough content before the element to cover the targeted viewport sizes. The box that follows is to ensure that the `amp-fx-flying-carpet` is placed after the first viewport.
+
+        <div class="viewport-100"></div>
+
+        ## Flying carpet for ads
+
+        `amp-fx-flying-carpet` can be used to display ads. Use the `height` parameter to specify the height of the flying carpets "window".
+      -->
+      <div>
+        <div class="amp-flying-carpet-text-border">Advertising</div>
+        <amp-fx-flying-carpet height="300px">
+          <amp-ad width="300" height="600" layout="fixed" type="doubleclick" data-slot="/35096353/amptesting/formats/flying_carpet">
+          </amp-ad>
+        </amp-fx-flying-carpet>
+        <div class="amp-flying-carpet-text-border">Advertising</div>
+      </div>
+      <div class="viewport-100"></div>
+      <!--
+        <div class="viewport-100"></div>
+
+        ## Flying carpet for images
+
+        `amp-fx-flying-carpet` can be also used to display images.
+      -->
+      <amp-fx-flying-carpet height="300px">
+        <amp-img src="https://preview.amp.dev/static/samples//img/landscape_lake_1280x857.jpg" width="1280" height="853" alt="an image">
+        </amp-img>
+      </amp-fx-flying-carpet>
+
+      <div class="viewport-100"></div>
+      <!--
+        ## Positioning
+
+        `amp-fx-flying-carpet` elements must be positioned before the last viewport so make sure to place enough content after the element to cover the targeted viewport sizes.
+
+        The box that follows is to ensure that the `amp-fx-flying-carpet` is placed before the last viewport.
+
+        <div class="viewport-100"></div>
+      -->
+</body></html>
