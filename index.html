@@ -2,7 +2,7 @@
 <html ⚡ lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Syco Ads</title>
+  <title>Syco Mobile Ads</title>
   <link rel="canonical" href="http://nonblocking.io/" >
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-custom>
@@ -13,7 +13,7 @@
       background-color: red;
     }
     .talldiv {
-      height: 2000px;
+      height: 200px;
     }
     amp-ad div[placeholder] {
       background-color: lightgray;
@@ -22,7 +22,7 @@
       background-color: black;
     }
     amp-ad div[placeholder]::after {
-      content: "loading ...";
+      content: "Loading Ad...";
     }
     amp-ad div[fallback]::after {
       content: "No ad";
@@ -39,7 +39,7 @@
       top: calc(50% - 15px);
     }
     amp-user-notification {
-      background-color: lightgray;
+      background-color: black;
       padding: 5px;
     }
   </style>
@@ -57,11 +57,11 @@
       layout=nodisplay
       id="amp-user-notification">
     This site uses cookies to personalize content.
-    <a href="#learn-more">Learn more.</a>
+    <a href="info.html">Learn more.</a>
     <button on="tap:amp-user-notification.dismiss" tabindex="0">I accept</button>
   </amp-user-notification>
 
-  <h1>AdSyco/h1>
+  <h1>AdSyco</h1>
 
   <amp-ad width=300 height=250
       type="adsense"
