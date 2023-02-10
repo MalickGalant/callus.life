@@ -6,6 +6,18 @@
   <link rel="canonical" href="http://nonblocking.io/" >
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-custom>
+    :root {
+      --color-secondary: #00DCC0;
+    }
+    .amp-flying-carpet-text-border {
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+    .viewport-100 {
+      height: 100vh;
+      background-color: var(--color-secondary);
+    }
     .pageWrapper {
                 background: red;
             }
@@ -79,10 +91,38 @@
   <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
   <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
   <script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js"></script>
-
+  <script async custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script>
 </head>
 <body>
+  <h1>Mobile Ads</h1>
+  <div class="viewport-100"></div>
 
+      <!--
+        `amp-fx-flying-carpet` elements must be positioned after the first viewport so make sure to place enough content before the element to cover the targeted viewport sizes. The box that follows is to ensure that the `amp-fx-flying-carpet` is placed after the first viewport.
+        <div class="viewport-100"></div>
+        ## Flying carpet for ads
+        `amp-fx-flying-carpet` can be used to display ads. Use the `height` parameter to specify the height of the flying carpets "window".
+      -->
+      <div>
+        <div class="amp-flying-carpet-text-border">Advertising</div>
+        <amp-fx-flying-carpet height="300px">
+          <amp-ad width="300" height="600" layout="fixed" type="doubleclick" data-slot="/35096353/amptesting/formats/flying_carpet">
+          </amp-ad>
+        </amp-fx-flying-carpet>
+        <div class="amp-flying-carpet-text-border">Advertising</div>
+      </div>
+      <div class="viewport-100"></div>
+      <!--
+        <div class="viewport-100"></div>
+        ## Flying carpet for images
+        `amp-fx-flying-carpet` can be also used to display images.
+      -->
+      <amp-fx-flying-carpet height="300px">
+        <amp-img src="https://preview.amp.dev/static/samples//img/landscape_lake_1280x857.jpg" width="1280" height="853" alt="an image">
+        </amp-img>
+      </amp-fx-flying-carpet>
+
+      <div class="viewport-100"></div>
   <amp-user-notification
       layout=nodisplay
       id="amp-user-notification">
@@ -91,7 +131,7 @@
     <button on="tap:amp-user-notification.dismiss" tabindex="0">I accept</button>
   </amp-user-notification>
 
-  <h1>Mobile Ads</h1>
+  
 
 <div class="pageWrapper">
 <div class="adFlexWrapper">
