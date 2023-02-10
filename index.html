@@ -94,6 +94,13 @@
   <script async custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script>
 </head>
 <body>
+  <amp-user-notification
+      layout=nodisplay
+      id="amp-user-notification">
+    This site uses cookies to personalize content.
+    <a href="info.html">Learn more.</a>
+    <button on="tap:amp-user-notification.dismiss" tabindex="0">I accept</button>
+  </amp-user-notification>
 
   <h1>Mobile Ads</h1>
   
@@ -131,33 +138,23 @@
       <div class="viewport-100"></div>
 
       <amp-fx-flying-carpet height="300px">
-        <amp-img src="https://preview.amp.dev/static/samples//img/landscape_lake_1280x857.jpg" width="1280" height="853" alt="an image">
+        <amp-img src="" width="1280" height="853" alt="an image">
         </amp-img>
       </amp-fx-flying-carpet>
 
 
 
-  <amp-user-notification
-      layout=nodisplay
-      id="amp-user-notification">
-    This site uses cookies to personalize content.
-    <a href="info.html">Learn more.</a>
-    <button on="tap:amp-user-notification.dismiss" tabindex="0">I accept</button>
-  </amp-user-notification>
   
  
-
-
 
   <div class=talldiv>
 
     <!-- Make the second ad below the fold. -->
   </div>
 
-  <h2>Sponsors</h2>
-   
   
-
+   
+ 
   <amp-sticky-ad layout="nodisplay">
   <amp-ad width="300" height="250"
       type="adsense"
