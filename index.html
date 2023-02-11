@@ -18,21 +18,8 @@
 </head>
 <body>
   <div align="center">
+
   <h1>Mobile Apk</h1>
-
-  
-
-  <amp-user-notification
-      layout=nodisplay
-      id="amp-user-notification">
-    This site uses cookies to personalize content.
-    <a href="index.html">Learn.</a>
-    <button on="tap:amp-user-notification.dismiss" tabindex="0">I accept</button>
-  </amp-user-notification>
-
-  </div>
-   
-  <div class=talldiv>
 
   <amp-ad layout="fluid" height="fluid"
     type="doubleclick"
@@ -42,19 +29,33 @@
   
   </amp-ad>
 
+
+  <amp-user-notification
+      layout=nodisplay
+      id="amp-user-notification">
+    This site uses cookies to personalize content.
+    <a href="index.html">Learn.</a>
+    <button on="tap:amp-user-notification.dismiss" tabindex="0">I accept</button>
+  </amp-user-notification>
+  
+
+
+  </div>
+   
+  <div class=talldiv> 
   <!-- Make the second ad below the fold. -->
   </div>
-
   
-   
- 
-<amp-sticky-ad layout="nodisplay">
+
+  <amp-sticky-ad layout="nodisplay">
   <amp-ad width="300" height="250"
       type="adsense"
       data-ad-client="ca-pub-8588820008944775">
   </amp-ad>
-</amp-sticky-ad>
+ </amp-sticky-ad>
+   
+ 
 
-<div class="viewport-100"></div>
+
 </body>
 </html>
