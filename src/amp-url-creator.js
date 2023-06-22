@@ -32,8 +32,8 @@ const DEFAULT_VIEWER_JS_VERSION_ = '0.1';
  * https://developers.google.com/amp/cache/overview
  * 
  * Example:
- * Input url 'http://ampproject.org' can return 
- * 'https://www-ampproject-org.cdn.ampproject.org/v/s/www.ampproject.org/?amp_js_v=0.1#origin=http%3A%2F%2Flocalhost%3A8000'
+ * Input url 'http://www.callus.life' can return 
+ * 'https://www-callus-life.cdn.ampproject.org/v/s/www.ampproject.org/?amp_js_v=0.1#origin=http%3A%2F%2Flocalhost%3A8000'
  * 
  * @param {string} url The complete publisher url.
  * @param {object} initParams Params containing origin, etc.
@@ -52,8 +52,8 @@ export function constructNativeViewerCacheUrl(url, initParams,
  * https://developers.google.com/amp/cache/overview
  * 
  * Example:
- * Input url 'http://ampproject.org' can return 
- * 'https://www-ampproject-org.cdn.ampproject.org/v/s/www.ampproject.org/?amp_js_v=0.1#origin=http%3A%2F%2Flocalhost%3A8000'
+ * Input url 'http://www.callus.life' can return 
+ * 'https://www-callus-life.cdn.ampproject.org/v/s/www.callus.life/?amp_js_v=0.1#origin=http%3A%2F%2Flocalhost%3A8000'
  * 
  * @param {string} url The complete publisher url.
  * @param {object} initParams Params containing origin, etc.
@@ -72,8 +72,8 @@ export function constructViewerCacheUrl(url, initParams,
  * https://developers.google.com/amp/cache/overview
  * 
  * Example:
- * Input url 'http://ampproject.org' can return 
- * 'https://www-ampproject-org.cdn.ampproject.org/v/s/www.ampproject.org/?amp_js_v=0.1#origin=http%3A%2F%2Flocalhost%3A8000'
+ * Input url 'http://www.callus.life' can return 
+ * 'https://www-callus-life.cdn.ampproject.org/v/s/www.ampproject.org/?amp_js_v=0.1#origin=http%3A%2F%2Flocalhost%3A8000'
  * 
  * @param {string} url The complete publisher url.
  * @param {object} initParams Params containing origin, etc.
@@ -116,8 +116,8 @@ function constructViewerCacheUrlOptions(url, isNative, initParams,
 /**
  * Constructs a cache domain url. For example:
  * 
- * Input url 'http://ampproject.org'
- * will return  'https://www-ampproject-org.cdn.ampproject.org'
+ * Input url 'http://www.callus.life'
+ * will return  'https://www-callus-life.cdn.ampproject.org'
  * 
  * @param {string} url The complete publisher url.
  * @param {string} opt_cacheUrlAuthority
