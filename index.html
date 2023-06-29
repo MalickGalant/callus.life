@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width">
   <meta name="ezoic-site-verification" content="kH7u7u4pmJzzqnCpbrhQQ7BTa5R6NF" />
   <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <title>Consent</title>
+  <title>Callus Life</title>
 
 
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
@@ -130,16 +130,16 @@
           {
             "consents": {
               "myConsent": {
-                "consentInstanceId": "my-amp-story-consent",
+                "consentInstanceId": "amp-consent",
                 "consentRequired": "remote",
-                "checkConsentHref": "/documentation/examples/api/get-consent",
+                "checkConsentHref": "/",
                 "promptUI": "consentUI"
               }
             }
           }
-        </script>
+  </script>
         
-        <amp-story-consent id="consentUI" layout="nodisplay">
+        <amp-consent id="consentUI" layout="nodisplay">
           <script type="application/json">
             {
               "title": "Headline",
@@ -147,64 +147,15 @@
               "vendors": ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10"]
             }
           </script>
-        </amp-story-consent>
+        </amp-consent>
       </amp-consent>
 
-      <amp-story-page id="page-1">
-        <amp-story-grid-layer template="fill">
-          <amp-video autoplay loop
-            width="400"
-            height="750"
-            poster="    "
-            layout="fill">
-            <source src="   " type="video/mp4">
-          </amp-video>
-        </amp-story-grid-layer>
-        <amp-story-grid-layer template="vertical" class="bottom">
-          <div class="icon"></div>
-          <h1 class="bold">Key Highlights</h1>
-          <p class="byline">Maliek Ads</p>
-        </amp-story-grid-layer>
-      </amp-story-page>
-
-      <amp-story-page id="page-2">
-        <amp-story-grid-layer template="fill">
-          <amp-img width="400" height="750" layout="fill" src="     "></amp-img>
-        </amp-story-grid-layer>
-        <amp-story-grid-layer template="vertical" class="bottom">
-          <h2 class="bold">Overview</h2>
-          <p>
-          We held the second AMP Conf to celebrate the breadth of the AMP
-            community and announce the latest AMP innovations. We engaged 400+
-            devs in-person over two days and thousands globally on live stream.
-            </p>
-          <p class="last">
-          Here are the key launches by the AMP team and others this year
-          </p>
-        </amp-story-grid-layer>
-      </amp-story-page>
-
-      <amp-story-bookend src="https://amp.dev/static/samples/json/bookend.json" layout="nodisplay">
-      </amp-story-bookend>
-
-    </amp-story>
-
-<!-- ## Demo: `amp-consent` inside an `amp-story`
-
-    The consent dialog will be shown as an overlay when the story starts.
-     <div class="abe-story-preview">
-        <amp-iframe media="(min-width: 650px)"
-          src="https://www.callus.life"
-            width="440" height="732" sandbox="allow-scripts allow-popups allow-same-origin">
-          <div placeholder></div>
-        </amp-iframe>
-      </div> -->
 
   <!-- ## Basic usage -->
   <!--
     This sample uses the `amp-next-page` component to load other sample pages. It defines a custom separator.
   -->
-<p class="previewOnly">
+  <p class="previewOnly">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis, metus a tristique aliquet, enim nibh efficitur sem, ut iaculis urna justo eu diam. Nullam cursus sapien et sodales posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. Donec vitae ornare risus. Maecenas eleifend ante vel dui laoreet, et porttitor libero rutrum. Nam arcu mi, ullamcorper at risus et, pulvinar ultrices erat. In pellentesque sem vel purus auctor, ut venenatis tellus tristique. Phasellus molestie diam orci, nec gravida turpis bibendum ut. Sed sagittis aliquet lorem sed dictum.
   </p>
   <p class="previewOnly">
