@@ -1,0 +1,19 @@
+{
+  "name": "Callus life",
+  "short_name": "Callus",
+  "start_url": "../app.html",
+  "id": "../app.html",
+  "icons": [
+    {
+      "src": "../assets/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "../assets/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "display": "standalone"
+}
